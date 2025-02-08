@@ -1,0 +1,224 @@
+  body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ebedf0;
+    color: #333;
+}
+
+.main-container {
+    display: flex;
+    max-width: 920px; 
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; 
+    overflow: hidden;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.signup-container {
+    width: 55%; 
+    padding: 30px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+/* Image Section (Now on the right side) */
+.image-section {
+    width: 45%; /* Slightly narrower */
+    background-image: url('../img/fire.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+.form-header {
+    margin-bottom: 15px;
+}
+
+.form-header img {
+    width: 65px; 
+    margin-bottom: 10px;
+}
+
+.form-header h1 {
+    font-size: 1.7rem; 
+    font-weight: 700;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    font-size: 0.95rem; 
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-top: 15px; 
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem; 
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px; 
+    font-size: 0.9rem; 
+    border: 1px solid #dfe1e5;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #d32f2f;
+    background-color: #ffffff;
+}
+
+.input-group {
+    position: relative;
+    width: 100%; 
+}
+
+.input-group input {
+    width: 100%;
+    padding-right: 40px; 
+    padding-left: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #dfe1e5;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #d32f2f; 
+    background-color: #ffffff; 
+}
+
+.input-group .eye-icon {
+    position: absolute;
+    top: 50%; 
+    right: 10px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    color: #888; 
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
+}
+
+.input-group input:focus + .eye-icon {
+    color: #d32f2f; 
+}
+
+.error-message {
+    display: none; 
+    color: red; 
+    font-size: 0.6em; 
+    margin-top: 1px; 
+    line-height: 1; 
+}
+
+.input-group input.error {
+    border-color: red; 
+    background-color: #fff5f5; 
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; 
+    margin-top: 15px;
+}
+
+/* Submit Button */
+.form-group button {
+    width: 100%;
+    padding: 10px; 
+    font-size: 1rem; 
+    font-weight: 600;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 26px; /* Less margin on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group button:hover {
+    background-color: #b71c1c;
+}
+
+.signup-footer {
+    margin-top: 20px;
+    font-size: 0.85rem; 
+    color: #666;
+    text-align: center;
+}
+
+.signup-footer a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-footer a:hover {
+    color: #b71c1c;
+}
+
+
+[role="alert"] {
+    margin-left: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .image-section {
+        width: 100%;
+        height: 180px; 
+    }
+
+    .signup-container {
+        width: 100%;
+        padding: 20px; 
+    }
+
+    .form-header h1 {
+        font-size: 1.4rem; 
+    }
+}

@@ -1,0 +1,287 @@
+.profile-modal{
+    height: auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+    
+#editClientModal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 500px;
+height: fit-content;
+background: #ffffff;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+color: #333;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+animation: fadeIn 0.3s ease-in-out;
+}
+
+#editClientModal .edit-client-header {
+background: #f9f9f9;
+padding: 20px;
+border-bottom: 1px solid #e0e0e0;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+height: 120px;
+z-index: 1010;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#editClientModal .edit-client-header .close-btn {
+position: absolute;
+top: 10px;
+right: 15px;
+font-size: 18px;
+color: #999;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+#editClientModal .edit-client-header .close-btn:hover {
+color: #ff4c4c;
+}
+
+#editClientModal .edit-client-header .header-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+#editClientModal .edit-client-header h2 {
+margin: 0;
+font-size: 20px;
+color: #333;
+font-weight: bold;
+letter-spacing: 0.5px;
+}
+
+#editClientModal .edit-client-body {
+flex: 1;
+padding: 20px;
+overflow-y: auto;
+background: #fff;
+max-height: calc(100% - 180px);
+transition: all 0.3s ease;
+}
+
+#editClientModal .form-group {
+margin-bottom: 15px;
+}
+
+#editClientModal .form-group label {
+font-size: 14px;
+color: #333;
+font-weight: 500;
+}
+
+#editClientModal .form-group input,
+#editClientModal .form-group select {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 8px;
+transition: border-color 0.3s ease;
+}
+
+#editClientModal .form-group input:focus,
+#editClientModal .form-group select:focus {
+border-color: #007bff;
+}
+
+#editClientModal .edit-client-footer {
+background: #f9f9f9;
+padding: 15px 20px;
+text-align: right;
+border-top: 1px solid #e0e0e0;
+height: 80px;
+box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+z-index: 1010;
+}
+
+#editClientModal .btn {
+background: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 14px;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+#editClientModal .btn:hover {
+background: #0056b3;
+}
+
+#editClientModal .btn-secondary {
+background: #f1f1f1;
+color: #333;
+border: 1px solid #ddd;
+}
+
+#editClientModal .btn-secondary:hover {
+background: #e0e0e0;
+}
+
+#editClientModal .edit-client-body::-webkit-scrollbar {
+width: 8px;
+}
+
+#editClientModal .edit-client-body::-webkit-scrollbar-thumb {
+background: #bbb;
+border-radius: 4px;
+}
+
+#editClientModal .edit-client-body::-webkit-scrollbar-thumb:hover {
+background: #999;
+}
+
+#editClientModal h2, #updateStatusModal h2{
+border: none;
+}
+
+#updateStatusModal{
+animation: fadeIn 0.3s ease-in-out;
+}
+
+#updateStatusModal .update-status-header {
+background: #f9f9f9;
+padding: 20px;
+border-bottom: 1px solid #e0e0e0;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+height: 120px;
+z-index: 1010;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#updateStatusModal .update-status-header .close-btn {
+position: absolute;
+top: 10px;
+right: 15px;
+font-size: 18px;
+color: #999;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+#updateStatusModal .update-status-header .close-btn:hover {
+color: #ff4c4c;
+}
+
+#updateStatusModal .update-status-header .header-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+#updateStatusModal .update-status-header h2 {
+margin: 0;
+font-size: 20px;
+color: #333;
+font-weight: bold;
+letter-spacing: 0.5px;
+}
+
+#updateStatusModal .update-status-body {
+flex: 1;
+padding: 20px;
+overflow-y: auto;
+background: #fff;
+max-height: calc(100% - 180px);
+transition: all 0.3s ease;
+}
+
+#updateStatusModal .form-group {
+margin-bottom: 15px;
+}
+
+#updateStatusModal .form-group label {
+font-size: 14px;
+color: #333;
+font-weight: 500;
+}
+
+#updateStatusModal .form-group select {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 8px;
+transition: border-color 0.3s ease;
+}
+
+#updateStatusModal .form-group select:focus {
+border-color: #007bff;
+}
+
+#updateStatusModal .update-status-footer {
+background: #f9f9f9;
+padding: 15px 20px;
+text-align: right;
+border-top: 1px solid #e0e0e0;
+height: 80px;
+box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+z-index: 1010;
+}
+
+#updateStatusModal .btn {
+background: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 14px;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+#updateStatusModal .btn:hover {
+background: #0056b3;
+}
+
+#updateStatusModal .btn-secondary {
+background: #f1f1f1;
+color: #333;
+border: 1px solid #ddd;
+}
+
+#updateStatusModal .btn-secondary:hover {
+background: #e0e0e0;
+}
+
+#updateStatusModal .update-status-body::-webkit-scrollbar {
+width: 8px;
+}
+
+#updateStatusModal .update-status-body::-webkit-scrollbar-thumb {
+background: #bbb;
+border-radius: 4px;
+}
+
+#updateStatusModal .update-status-body::-webkit-scrollbar-thumb:hover {
+background: #999;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+}
+to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+}

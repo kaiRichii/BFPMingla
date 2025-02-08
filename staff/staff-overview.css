@@ -1,0 +1,414 @@
+.top-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #f1f3f6);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+.top-metrics h2{
+    border: none;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 5px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 500px;
+    height: 550px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+}
+
+.chart-card h3 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.chart {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filters select, .filters input {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+/* application list: */
+.profile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    max-height: 90vh;
+    background: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #333;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.profile-modal h2{
+    border: none;
+}
+
+
+/* Profile Header */
+.profile-header {
+    background: #f7f7f7; 
+    padding: 30px 25px 20px 25px; 
+    border-bottom: 1px solid #e0e0e0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 90px; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-header .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #b71c1c; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profile-header .close-btn:hover {
+    color: #a11a1a;
+}
+
+.profile-header .header-content {
+    text-align: center;
+}
+
+.profile-header .profile-info h2 {
+     margin: 0;
+    font-size: 22px; 
+    color: #333;
+    font-weight: 600;
+}
+
+/* Profile Body (Scrollable) */
+.profile-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+    background: #fafafa; 
+    max-height: calc(90vh - 180px); 
+    overflow-x: hidden;
+}
+.profile-body section {
+   margin-bottom: 25px;
+}
+/* Section Headers */
+.profile-body section h3 {
+    font-size: 16px;
+    color: #333; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0; 
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Info List Styling */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* QR Code Styling */
+.qr-code img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.profile-footer {
+    background: #ffffff;
+    padding: 20px 30px;
+    text-align: right;
+    border-top: 1px solid #e0e0e0; 
+    height: 80px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Footer Button Styling */
+#closeClientProfileButton {
+    background: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#closeClientProfileButton:hover {
+    background: #e0e0e0;
+}
+
+/* Scrollbar Styling */
+.profile-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.profile-body::-webkit-scrollbar-thumb {
+     background: #ccc; 
+    border-radius: 4px;
+}
+
+.profile-body::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+/* Main Edit Client Modal */
+#editClientModal,  #generateInspectionModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    max-height: 90vh;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #333;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Profile Header */
+#editClientModal .profile-header,  #generateInspectionModal .profile-header {
+    background: #f7f7f7;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80px; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#editClientModal .profile-header .close-btn,  #generateInspectionModal .profile-header .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #b71c1c; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#editClientModal .profile-header .close-btn:hover,  #generateInspectionModal .profile-header .close-btn:hover {
+      color: #a11a1a; 
+}
+
+#editClientModal .profile-header .header-content,  #generateInspectionModal .profile-header .header-content {
+    text-align: center;
+}
+
+#editClientModal .profile-header h2,  #generateInspectionModal .profile-header h2 {
+   margin: 0;
+    font-size: 18px; 
+    color: #333;
+    font-weight: 600; 
+}
+
+/* Profile Body (Scrollable) */
+#editClientModal .profile-body, #generateInspectionModal .profile-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+    background: #fafafa; 
+    max-height: calc(90vh - 160px); 
+}
+
+/* Form Group Styling */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#editClientModal .form-group, #generateInspectionModal .form-group {
+    flex: 1;
+}
+
+#editClientModal .form-group label, #generateInspectionModal .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+#editClientModal .form-group input, #generateInspectionModal .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+#editClientModal .form-group input:focus, #generateInspectionModal .form-group:focus {
+    border-color: #b71c1c;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Section Header */
+#editClientModal h6 {
+    font-size: 0.8em;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Footer */
+#editClientModal .profile-footer, #generateInspectionModal .profile-footer {
+    background: #ffffff;
+    padding: 20px 30px;
+    text-align: right;
+    border-top: 1px solid #e0e0e0;
+    height: 80px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Footer Button Styling */
+#editClientModal .btn,  #generateInspectionModal .btn {
+   background: #b71c1c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#editClientModal .btn:hover,  #generateInspectionModal .btn:hover {
+     background: #9f1a1a;
+}
+
+#editClientModal .btn-secondary,  #generateInspectionModal .btn-secondary {
+    background: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+#editClientModal .btn-secondary:hover,  #generateInspectionModal .btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+/* Scrollbar Styling */
+#editClientModal .profile-body::-webkit-scrollbar,  #generateInspectionModal .profile-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#editClientModal .profile-body::-webkit-scrollbar-thumb,  #generateInspectionModal .profile-body::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 4px
+}
+
+#editClientModal .profile-body::-webkit-scrollbar-thumb:hover,  #generateInspectionModal .profile-body::-webkit-scrollbar-thumb:hover {
+      background: #bbb; 
+}

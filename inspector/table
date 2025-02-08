@@ -1,0 +1,41 @@
+ <div class="table-container">
+            <table id="applicationTable" class="table table-striped nowrap">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" onclick="toggleAllCheckboxes(this)"></th>
+                        <th>Application Type</th>
+                        <th>Owner Name</th>
+                        <th>Inpsection Schedule</th>
+                        <th>Inspection Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationTableBody">
+                <?php if (count($applications) > 0): ?>
+                        <?php foreach ($applications as $app): ?>
+                            <tr>
+                                <td><input type="checkbox" name="action[]" value="<?= htmlspecialchars($app['appid']) ?>"></td>
+                                <td><?= htmlspecialchars($app['application_type']) ?></td>
+                                <td><?= htmlspecialchars($app['owner_name']) ?></td>
+                                <td><?= htmlspecialchars($app['schedule']) ?></td>
+                                <td><?= htmlspecialchars(getInspection($app['inspection_status'])) ?></td>
+                                <td>
+                                    <select onchange="handleAction(this)" style="padding: 5px; border-radius: 4px; width: 100%;">
+                                        <option value="">Select</option>
+                                        <option value="view">View</option>
+                                        <option value="edit">Edit</option>
+                                    </select>
+                                </td>
+                                <input type="hidden" class="facilityName" value="<?= htmlspecialchars($app['business_trade_name']) ?>">
+                                <input type="hidden" class="address" value="<?= htmlspecialchars($app['address']) ?>">
+                                <input type="hidden" class="email" value="<?= htmlspecialchars($app['email_address']) ?>">
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="8" style="text-align: center;">No applications found.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
